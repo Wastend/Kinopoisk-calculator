@@ -4,3 +4,21 @@
   padding: 0;
   margin: 0;
 }
+
+h1 {
+  color: #379600;
+  text-align: center;
+  width: 100%;
+  font-size: 2.2em;
+}
+
+a {
+  color: #ff8200;
+  text-decoration: none;
+  transition: .6s;
+
+  &:hover,
+  &:active {
+    color: #9f5408;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="calculator">
+  <h1>Мой простой калькулятор</h1>
+  <input type="number" name="" id="" [(ngModel)]="calcGroup.value" placeholder="Введите число">
+  <ul class="calculator_buttons">
+    <ng-container *ngFor="let operation of calcOperations | keyvalue">
+      <li *ngIf="operation.value !== ''">
+        <button (click)="calcEvent(operation.value)">{{operation.value}}</button>
+      </li>
+    </ng-container>
+  </ul>
+  <h2>Результат: {{calcGroup.result}}</h2>
+</div>
