@@ -3,4 +3,13 @@
   gap: 20px;
   list-style: none;
   margin: 10px 0;
+  & a.active {
+    color: #df7303;
+    cursor: default;
+
+    &:hover,
+    &:active {
+      color: #df7303;
+    }
+  }
 }

@@ -1,0 +1,19 @@
+<div class="kinopoisk">
+  <h1>Кинопоиск</h1>
+  <div class="kinopoisk_search">
+    <input type="text" name="" id="movie_search" [(ngModel)]="movieSearch" placeholder="Введите название фильма" (keyup.enter)="findMovies()">
+    <button type="button" (click)="findMovies()">
+      <img src="./assets/images/icons/magnifier.png" alt="magnifier">
+    </button>
+
+  </div>
+
+  <ul class="kinopoisk_list">
+    <li (click)="navigateToDetail(movie.id)" class="kinopoisk_movie" *ngFor="let movie of movies">
+        <img src={{movie.poster.previewUrl}} alt="">
+        <h4>{{movie.name}}</h4>
+        <p>{{movie.shortDescription}}</p>
+
+    </li>
+  </ul>
+</div>
